@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider.value(
           value: ProductProvider()
-            ..WallPaperData()
+            // ..WallPaperData()
             ..getProductData(),
         ),
       ],

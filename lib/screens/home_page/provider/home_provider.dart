@@ -16,11 +16,11 @@ class ProductProvider with ChangeNotifier {
 
   List<Hits> hitsList = [];
 
-  Future<void> WallPaperData() async {
+  Future<void> WallPaperData(String search) async {
     APIHelper helper = APIHelper();
     log('conv');
-    WallPaperModel? wallPaperModel = await helper.getWallPaperData();
-     hitsList = wallPaperModel!.hit!;
+    WallPaperModel? wallPaperModel = await helper.getWallPaperData(search);
+    hitsList = wallPaperModel!.hit!;
     log('conv done');
     notifyListeners();
   }
